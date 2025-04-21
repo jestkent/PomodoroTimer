@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Session Timer</h1>
+        
+        <div class="timer-container">
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            
+            <div class="timer-controls">
+                <button id="start-btn">Start</button>
+                <button id="pause-btn" disabled>Pause</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+        
+        <div class="session-settings">
+            <div class="setting">
+                <label for="study-time">Study (min):</label>
+                <input type="number" id="study-time" value="25" min="1" max="120">
+            </div>
+            
+            <div class="setting">
+                <label for="break-time">Break (min):</label>
+                <input type="number" id="break-time" value="5" min="1" max="30">
+            </div>
+            
+            <div class="setting">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="What are you studying?">
+            </div>
+        </div>
+        
+        <div class="sound-controls">
+            <h3>Ambient Sound</h3>
+            <div class="sound-options">
+                <button class="sound-btn" data-sound="none">None</button>
+                <button class="sound-btn" data-sound="rain">Rain</button>
+                <button class="sound-btn" data-sound="forest">Forest</button>
+                <button class="sound-btn" data-sound="cafe">Café</button>
+            </div>
+            <div class="volume-control">
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" min="0" max="100" value="50">
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <h3>Today's Progress</h3>
+            <div class="stats">
+                <div class="stat">
+                    <span id="total-sessions">0</span>
+                    <p>Sessions</p>
+                </div>
+                <div class="stat">
+                    <span id="total-minutes">0</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="stat">
+                    <span id="current-streak">0</span>
+                    <p>Streak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
