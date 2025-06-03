@@ -216,7 +216,7 @@ function handleSoundSelection(event) {
                 soundUrl = 'https://soundbible.com/grab.php?id=1818&type=mp3';
                 break;
             case 'cafe':
-                soundUrl = 'https://soundbible.com/grab.php?id=2056&type=mp3';
+                soundUrl = 'https://soundbible.com/mp3/Coffee%20Shop%20Sound-SoundBible.com-1034099141.mp3'; // <-- MODIFIED LINE
                 break;
         }
         
